@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+    php:
+        #image: php:5.6-apache
+        build:
+                context: .
+                dockerfile: ./docker/php.Dockerfile
+        ports:
+            - 80:80
+        volumes:
+            - ./php_scripts:/var/www/html
